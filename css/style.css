@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 1s;
+    font-family: "Special Elite", serif;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imgs/backgraund.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    user-select: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    border-radius: 15%;
+    min-height: fit-content;
+}
+
+h1{
+    font-size: 4rem;
+    text-shadow: 5px 3px 7px rgb(129, 43, 43);
+    font-family: "Bungee Inline", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+table{
+    background-image: url(../imgs/vegetation.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+td {
+    border: 2px solid white;
+    text-align: center;
+    font-size: 120%;
+    color: white;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.buttons {
+    margin: 15px 0px;
+}
+
+button {
+    font-family: "Special Elite", serif;
+    font-size: 1.2rem;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.clicks,
+.timer {
+    width: 30px;
+    vertical-align: middle;
+}
+
+.t-rex {
+    width: 45px;
+    vertical-align: middle;
+}
+
+#newGame,
+td,
+#mines,
+#gameMode,
+#time-counter,
+#clicks-number {
+    box-shadow: inset 3px 3px 0 0 rgba(255, 255, 255, 0.5),
+        inset -3px -3px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+#clicks-counter {
+    color: white;
+    font-size: 1rem;
+}
+
+#newGame,
+#mines,
+#gameMode,
+#time-counter,
+#clicks-number {
+    padding: 10px;
+    margin: 10px;
+}
+
+#newGame {
+    background-color: rgb(219, 64, 95);
+    cursor: pointer;
+}
+
+#mines,
+#time-counter,
+#clicks-number {
+    background: black;
+    color: rgb(219, 64, 95);
+}
+
+#gameMode {
+    background-color: rgb(219, 64, 95);
+    cursor: pointer;
+}
+
+#game-mode-menu {
+    position: absolute;
+    top: 115px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#game-mode-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#game-mode-menu li {
+    margin-bottom: 10px;
+}
+
+#game-mode-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#game-mode-menu a:hover {
+    color: #ccc;
+}
+
+.game-mode-container {
+    position: relative;
+    display: inline-block;
+}
