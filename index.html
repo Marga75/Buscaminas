@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscaminas jurásico</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/popup.css">
+    <!-- Link para las fuentes de las letras -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Buscaminas jurásico</h1>
+
+        <div class="buttons">
+            <button id="newGame">Nuevo Juego</button>
+
+            <div class="game-mode-container">
+                <button id="gameMode">Modo de juego</button>
+
+                <div id="game-mode-menu" style="display: none">
+                    <ul>
+                        <li><a href="#">Fácil</a></li>
+                        <li>
+                            <a href="#">Intermedio</a>
+                        </li>
+                        <li>
+                            <a href="#">Difícil</a>
+                        </li>
+                        <li>
+                            <a href="#">Contrarreloj</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info">
+            <p><img class="t-rex" src="imgs/t-rex.webp" alt="t-rex"><span id="mines">00</span></p>
+            <p><img class="clicks" src="imgs/click.webp" alt="click"><span id="clicks-number">0</span></p>
+            <p><img class="timer" src="imgs/timer.webp" alt="timer"><span id="time-counter">00:00</span></p>
+        </div>
+
+        <table id="gameBoard"></table>
+
+    </div>
+
+    <!-- Código HTML del popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <button id="close-popup" class="close-popup"><span>X</span></button>
+            <h2 id="popup-title"></h2>
+            <p id="popup-message"></p>
+        </div>
+    </div>
+</body>
+
+</html>
