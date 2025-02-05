@@ -8,3 +8,7 @@ let mines = rows * columns * 0.1; // Número total de minas (10% del total de ce
 
 let gameStarted = false; // Indica si el juego ya ha comenzado
 let gameBoard = []; // Matriz que representa el tablero del juego
+let inGame = true; // Indica si el juego sigue en curso
+let clicks = 0; // Contador de clics del jugador
+let intervalId = null; // ID del intervalo del cronómetro
+let gameOver = false; // Indica si el juego ha terminado
