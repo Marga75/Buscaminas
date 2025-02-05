@@ -17,7 +17,7 @@ function updateTimeCounter(){
             tiempo--; // Disminuye el tiempo en modo contrarreloj
         } else {
             stopTimer();
-            alert("¡Tiempo agotado!");
+            showPopup("¡Tiempo agotado!");
             stopGame();
         }
     } else {
