@@ -23,8 +23,14 @@ function newGame() {
   clicks = 0; // Reinicia el contador de clics
   updateClicksCounter(); // Actualiza la interfaz del contador de clics
 
-  tiempo = 0; // Reinicio normal del tiempo
-  document.getElementById("time-counter").innerHTML = "00:00";
+  // Configuración del temporizador según el modo de juego
+  if (isContrareloj) {
+    tiempo = 60; // 1 minuto para el modo contrarreloj
+    document.getElementById("time-counter").innerHTML = `01:00`;
+  } else {
+    tiempo = 0; // Reinicio normal del tiempo
+    document.getElementById("time-counter").innerHTML = "00:00";
+  }
 }
 
 // Restablece variables clave para iniciar un nuevo juego

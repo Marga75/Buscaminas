@@ -12,8 +12,18 @@ function updateTimeCounter(){
         return;
     }
 
-    tiempo++;
-    
+    if (isContrareloj) {
+        if (tiempo > 0) {
+            tiempo--; // Disminuye el tiempo en modo contrarreloj
+        } else {
+            stopTimer();
+            alert("¡Tiempo agotado!");
+            stopGame();
+        }
+    } else {
+        tiempo++; // Aumenta el tiempo en otros modos
+    }
+
     // Formatea el tiempo en minutos y segundos
     let minutos = Math.floor(tiempo / 60);
     let segundos = tiempo % 60;
