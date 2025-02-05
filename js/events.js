@@ -37,6 +37,7 @@ function simpleClick(boardCell, c, r, me) {
   if (!gameStarted) {
     gameStarted = true;
     gameStartTime = new Date().getTime();
+    generateDashboardGame(c, r); // Asegura que la primera jugada no sea una mina
 
     if (intervalId === null) {
       intervalId = setInterval(updateTimeCounter, 1000);
@@ -47,11 +48,6 @@ function simpleClick(boardCell, c, r, me) {
     case 0: // Clic izquierdo: descubre la celda
       if (gameBoard[c][r].condition == "marked") {
         break;
-      }
-
-      // Asegura que la primera jugada no sea una mina
-      while (!gameStarted && gameBoard[c][r].value == -1) {
-        generateDashboardGame();
       }
 
       gameBoard[c][r].condition = "uncovered";
