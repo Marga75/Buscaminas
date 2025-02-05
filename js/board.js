@@ -33,7 +33,7 @@ function refreshBoard(){
                 // Muestra una mina, un número o una celda vacía según su valor
                 switch (gameBoard[c][r].value){
                     case -1:
-                        boardCell.innerHTML = `img class="mine" src="imgs/velociraptor.webp alt="velociraptor">`;
+                        boardCell.innerHTML = `<img class="mine" src="imgs/velociraptor.webp" alt="velociraptor">`;
                         break;
                     case 0:
                         break;
@@ -56,8 +56,8 @@ function refreshBoard(){
         }
     }
 
-    verifyWinner(); // Comprueba si el jugador ha ganado
-    verifyLoser(); // Comprueba si el jugador ha perdido
+    //verifyWinner(); // Comprueba si el jugador ha ganado
+    //verifyLoser(); // Comprueba si el jugador ha perdido
     updateMinePanel(); // Actualiza el panel de minas restantes
 
 }
