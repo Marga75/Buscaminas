@@ -1,9 +1,9 @@
 //Lógica de generación de minas y contadores
 
 //Genera el tablero de juego con minas y contadores númericos
-function generateDashboardGame() {
+function generateDashboardGame(firstC, firstR) {
   emptyBoard(); // Reinicia el tablero
-  putMines(); // Coloca las minas aleatoriamente
+  putMines(firstC, firstR); // Coloca las minas aleatoriamente
   mineCounters(); // Calcula y asigna los contadores de minas
   gameStarted = true;
 }
@@ -17,17 +17,20 @@ function emptyBoard() {
 }
 
 // Inserta minas en posiciones aleatorias del tablero
-function putMines() {
-  for (let i = 0; i < mines; i++) {
-    let c;
-    let r;
+function putMines(firstC, firstR) {
+  let placedMines = 0;
 
-    do {
-      c = Math.floor(Math.random() * columns);
-      r = Math.floor(Math.random() * rows);
-    } while (gameBoard[c][r]); // Evita colocar dos minas en la misma celda
+  while (placedMines < mines) {
+    let c = Math.floor(Math.random() * columns);
+    let r = Math.floor(Math.random() * rows);
+
+    // Evita colocar una mina en la primera jugada o en una celda ya ocupada
+    if ((c === firstC && r === firstR) || gameBoard[c][r]) {
+      continue;
+    }
 
     gameBoard[c][r] = { value: -1 }; // Representa una mina con -1
+    placedMines++;
   }
 }
 
