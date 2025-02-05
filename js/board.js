@@ -56,8 +56,8 @@ function refreshBoard(){
         }
     }
 
-    //verifyWinner(); // Comprueba si el jugador ha ganado
-    //verifyLoser(); // Comprueba si el jugador ha perdido
+    verifyWinner(); // Comprueba si el jugador ha ganado
+    verifyLoser(); // Comprueba si el jugador ha perdido
     updateMinePanel(); // Actualiza el panel de minas restantes
 
 }
