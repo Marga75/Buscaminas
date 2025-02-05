@@ -13,27 +13,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Special+Elite&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body oncontextmenu="return false">
     <div class="container">
         <h1>Minas jurásicas</h1>
 
         <div class="buttons">
-            <button id="newGame">Nuevo Juego</button>
+            <button id="newGame" onclick="newGame()">Nuevo Juego</button>
 
             <div class="game-mode-container">
-                <button id="gameMode">Modo de juego</button>
+                <button id="gameMode" onclick="toggleGameModeMenu()">Modo de juego</button>
 
                 <div id="game-mode-menu" style="display: none">
                     <ul>
-                        <li><a href="#">Fácil</a></li>
+                        <li><a href="#" onclick="selectGameMode('facil')">Fácil</a></li>
                         <li>
-                            <a href="#">Intermedio</a>
+                            <a href="#" onclick="selectGameMode('intermedio')">Intermedio</a>
                         </li>
                         <li>
-                            <a href="#">Difícil</a>
+                            <a href="#" onclick="selectGameMode('dificil')">Difícil</a>
                         </li>
                         <li>
-                            <a href="#">Contrarreloj</a>
+                            <a href="#" onclick="selectGameMode('contrareloj')">Contrarreloj</a>
                         </li>
                     </ul>
                 </div>
@@ -68,6 +68,7 @@
      <script src="js/timer.js"></script>
      <script src="js/status.js"></script>
      <script src="js/game.js"></script>
+     <script src="js/gameMode.js"></script>
 
 </body>
 

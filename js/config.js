@@ -12,3 +12,5 @@ let inGame = true; // Indica si el juego sigue en curso
 let clicks = 0; // Contador de clics del jugador
 let intervalId = null; // ID del intervalo del cronómetro
 let gameOver = false; // Indica si el juego ha terminado
+let isContrareloj = false; // Indica si el modo contrarreloj está activado
+let gameStartTime = null; // Guarda el tiempo exacto de inicio del juego
