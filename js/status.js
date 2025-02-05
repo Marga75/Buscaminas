@@ -23,7 +23,7 @@ function verifyWinner() {
         }
     }
 
-    alert('¡Felicidades!', 'Has ganado en ' + document.getElementById("time-counter").innerHTML + ' con ' + clicks + ' clics.');
+    showPopup('¡Felicidades!', 'Has ganado en ' + document.getElementById("time-counter").innerHTML + ' con ' + clicks + ' clics.');
 
     inGame = false;
     gameStarted = false;
@@ -48,7 +48,7 @@ function verifyLoser() {
             gameOver = true;
             stopTimer();
             showLoseScreen();
-            alert('¡Lo siento!', 'Has perdido. El dinosaurio te ha encontrado.');
+            showPopup('¡Lo siento!', 'Has perdido. El dinosaurio te ha encontrado.');
         }
     }
 }
