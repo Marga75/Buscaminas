@@ -12,12 +12,17 @@ function openArea(c, r) {
 
                 if (gameBoard[c + i][r + j].condition != "uncovered") {
                     if (gameBoard[c + i][r + j].condition != "marked") {
+                        if (gameBoard[c + i][r + j].value == -1) { // Verifica si es una mina
+                            return; // Si es una mina, no abre el área
+                        }
+
                         gameBoard[c + i][r + j].condition = "uncovered";
 
                         // Si la celda es vacía (0), continúa expandiendo el área
                         if (gameBoard[c + i][r + j].value == 0) {
                             openArea(c + i, r + j);
                         }
+
                     }
                 }
 
