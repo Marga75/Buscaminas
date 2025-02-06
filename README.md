@@ -1,4 +1,6 @@
 # Buscaminas
+================
+Abrir con el Live Server
 
 # Inspiraciones
     - Imagen de referencia:
